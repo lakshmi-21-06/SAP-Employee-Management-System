@@ -1,0 +1,11 @@
+@EndUserText.label : 'Leave Details Structure'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+
+define structure zleave_str1 {
+  leave_id   : abap.char(10);
+  emp_id     : abap.char(10);
+  leave_type : abap.char(20);
+  from_date  : abap.dats;
+  to_date    : abap.dats;
+  status     : abap.char(15);
+}
