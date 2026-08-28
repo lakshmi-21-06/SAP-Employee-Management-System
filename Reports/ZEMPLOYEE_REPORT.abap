@@ -34,7 +34,7 @@ PARAMETERS:
   p_att_dt TYPE zattendancetab-att_date.
 
 PARAMETERS:
-  p_pres RADIOBUTTON GROUP stat DEFAULT 'X',
+  p_pres RADIOBUTTON GROUP  stat DEFAULT 'X',
   p_abs  RADIOBUTTON GROUP stat.
 
 SELECTION-SCREEN END OF BLOCK b3.
@@ -45,9 +45,10 @@ DATA:
   lt_employee TYPE zcl_employee_manager=>tt_employee.
 
 
-AT SELECTION-SCREEN ON p_empid.
+AT SELECTION-SCREEN.
 
-  IF p_empid IS NOT INITIAL.
+  IF p_empid IS NOT INITIAL
+     AND p_create IS INITIAL.
 
     SELECT SINGLE
       emp_name,
@@ -74,7 +75,6 @@ AT SELECTION-SCREEN ON p_empid.
     ENDIF.
 
   ENDIF.
-
 
 START-OF-SELECTION.
 
