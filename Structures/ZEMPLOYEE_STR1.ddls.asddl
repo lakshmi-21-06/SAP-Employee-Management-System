@@ -1,0 +1,10 @@
+@EndUserText.label : 'Employee Structure'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+
+define structure zemployee_str1 {
+  emp_id      : abap.char(10);
+  emp_name    : abap.char(40);
+  department  : abap.char(30);
+  designation : abap.char(40);
+  join_date   : abap.dats;
+}
